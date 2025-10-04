@@ -1,6 +1,6 @@
 # Remote Terraform State (AWS)
 
-This module creates S3 bucket to enable storing terraform state on a remote backend
+This module creates S3 bucket resources to enable storing terraform state on a remote backend
 
 ## Initial run
 

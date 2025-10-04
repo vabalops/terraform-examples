@@ -3,6 +3,7 @@ resource "random_id" "bucket_id" {
 }
 
 resource "aws_s3_bucket" "terraform_state" {
+  region = var.aws_region
   bucket = "${var.bucket_name_prefix}-${random_id.bucket_id.hex}"
 
   # ! Deprecated
@@ -13,6 +14,7 @@ resource "aws_s3_bucket" "terraform_state" {
 
 resource "aws_s3_bucket_versioning" "enabled" {
   bucket = aws_s3_bucket.terraform_state.id
+
   versioning_configuration {
     status = "Enabled"
   }

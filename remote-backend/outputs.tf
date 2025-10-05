@@ -20,5 +20,5 @@ output "replication_bucket_name" {
 
 output "replica_bucket_region" {
   description = "The region the S3 bucket is created in"
-  value       = var.enable_replication ? aws_s3_bucket.replication[0].region  : null
+  value       = var.enable_replication ? aws_s3_bucket.replication[0].region : null
 }

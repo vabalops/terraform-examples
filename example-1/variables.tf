@@ -9,3 +9,9 @@ variable "aws_vpc_cidr" {
   type        = string
   default     = "10.0.0.0/20" # 10.0.0.0 - 10.0.15.255
 }
+
+variable "aws_instance_type" {
+  description = "The instance type for the EC2 instances"
+  type        = string
+  default     = "t3.micro"
+}

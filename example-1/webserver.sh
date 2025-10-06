@@ -3,7 +3,7 @@
 set -euxo pipefail
 exec > /var/log/bootstrap.log 2>&1
 
-dnf -y install nginx amazon-efs-utils nfs-utils
+dnf -y install nginx
 systemctl enable --now nginx
 
 cat >/usr/share/nginx/html/index.html <<'EOF'
